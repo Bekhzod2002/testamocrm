@@ -1,0 +1,17 @@
+@import './Assets/mixins/mixins.scss';
+
+.window{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1100px;
+    background: #0E1014;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    @include respons(320px) {
+        width: 320px;
+        height: 1315px;
+    }
+
+}

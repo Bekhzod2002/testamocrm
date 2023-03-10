@@ -1,0 +1,164 @@
+@import '../../Assets/mixins/mixins.scss';
+
+.footer{
+    position: absolute;
+    width: 1141px;
+    height: 315px;
+    left: 149px;
+    top: 765px;
+    display: flex;
+    gap: 5%;
+    bottom: 0px;
+    @include respons(320px){
+        position: absolute;
+        display: grid;
+        left: 1px;
+        top: 600px;
+
+    }
+    .aboutus{
+        position: absolute;
+        left: 0;
+        height: 140px;
+        display: grid;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #E4E5EA;
+        @include respons(320px) {
+            position: absolute;
+            width: 91px;
+            height: 15px;
+            left: 10px;
+            display: grid;
+            gap: 20px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+
+        }
+        .aboutlink{
+            width: 250px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #656566;
+        }
+    
+    }
+    .menu{
+        position: absolute;
+        left: 293px;
+        height: 240px;
+        display: grid;
+        color: #E4E5EA;
+        @include respons(320px) {
+            position: absolute;
+            top: 140px;
+            left: 10px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        .menufoot{
+            color: #656566;
+        }
+        .menulinks{
+            width: 500px;
+            display: flex;
+            gap: 14%;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #E4E5EA;
+
+            @include respons(320px) {
+                width: 320px;
+                display: flex;
+                gap: 10%;
+            }
+
+        }
+    }
+    .footcontacts{
+        position: absolute;
+        display: grid;
+        width: 270px;
+        height: 205px;
+        left: 870px;
+        text-align: right;
+        color: #E4E5EA;
+        @include respons(320px) {
+            position: absolute;
+            left: 10px;
+            height: 140px;
+            top: 400px;
+            text-align: left;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+        }
+        .contacts_foot{
+            color: #656566;
+        }
+        
+        .footicons{
+            display: flex;
+            gap: 5%;
+            justify-content: end;
+            @include respons(320px) {
+                justify-content: start;
+            }
+            img{
+                width: 20px;
+                height: 20px; 
+            }
+        }
+    }
+
+}
+
+.foottxt{
+    position: absolute;
+    width: 239px;
+    top: 1010px;
+    left: 1050px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    text-decoration-line: underline;
+    color: #E4E5EA;
+
+    @include respons(320px) {
+        position: absolute;
+        width: 239px;
+        height: 15px;
+        top: 1174px;
+        left: 10px;
+        text-align: left;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        
+        color: #E4E5EA;
+    }
+}
