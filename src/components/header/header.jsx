@@ -11,6 +11,7 @@ const Header = () => {
     return(
         <>
         <div className="circlehead"></div>
+        <div className="circleten"></div>
             <div className="header">
                 <div className="logo">
                     <img className="logoimg" src={logo}/>
