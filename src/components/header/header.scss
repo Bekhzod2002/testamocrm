@@ -1,152 +1,144 @@
-@import '../../Assets/mixins/mixins.scss';
-
-.circlehead{
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    left: 868px;
-    top: -2px;
-    
-    background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.208) 78.59%, rgba(86, 24, 128, 0.232) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
-    filter: blur(5px);
-    backdrop-filter: blur(2px);
-    border-radius: 30px;
-    @include respons(320px) {
-        display: none;
-    }
-}
-
-.circleten{
-    position: absolute;
-    width: 259px;
-    height: 259px;
-    left: 602px;
-    top: -154px;
-    
-    background: #833AB4;
-    opacity: 0.5;
-    filter: blur(196px);
-    @include respons(320px) {
-        position: absolute;
-        width: 259px;
-        height: 259px;
-        left: 258px;
-        top: 107px;
-        
-        background: #833AB4;
-        opacity: 0.5;
-        filter: blur(196px);
-    }
-}
-
-.header{
-    position: absolute;
-    width: 1141px;
-    height: 73px;
-    left: 150px;
-    top: 46px;
+.header {
+    position: relative;
+    padding: 57px 0 127px;
     display: flex;
     align-items: center;
-    @include respons(320px) {
-        position: absolute;
-        width: 320px;
-        height: 55px;
-        left: 0px;
-        top: 0px;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+      padding: 20px 0;
+      z-index: 33;
     }
-
-    .logo{
-        display: grid;
-        @include respons(320px) {
+    &__logo {
+      width: 140px;
+      height: 24px;
+      margin-right: 54px;
+      @media (max-width: 1024px) {
+        margin-right: 25px;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    &__description {
+      left: 0;
+      bottom: 93px;
+      position: absolute;
+      width: 165px;
+      height: 24px;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 12px;
+      color: #e4e5ea;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    &__navbar {
+      position: relative;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #e4e5ea;
+      @media (max-width: 768px) {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        justify-content: space-between;
+      }
+      a {
+        z-index: 3;
+        margin-right: 30px;
+        @media (max-width: 1280px) {
+          margin-right: 15px;
+        }
+        &:last-child {
+          margin-right: 0;
+          @media (max-width: 768px) {
             display: none;
+          }
         }
-        .logoimg{
-            position: absolute;
-            width: 120px;
-            height: 24px;
-            left: 0px;
-            top: 11px;
-            
+        @media (max-width: 768px) {
+          margin-right: 0px;
         }
-        .crm{
-            position: absolute;
-            width: 165px;
-            height: 24px;
-            left: 0px;
-            top: 35px;
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 10px;
-            line-height: 12px;
-
-            color: #E4E5EA;
-
-        }
+      }
     }
-    .menu_important{
-        position: absolute;
-        width: 503px;
-        height: 19px;
-        left: 192px;
-        font-family: 'Inter';
+    &__contacts {
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      @media (max-width: 768px) {
+        display: none;
+      }
+      a {
+        &:first-child {
+          margin-right: 47px;
+          @media (max-width: 1280px) {
+            margin-right: 20px;
+          }
+          @media (max-width: 1024px) {
+            display: none;
+          }
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        @media (max-width: 1280px) {
+          margin-right: 15px;
+        }
+        margin-right: 35px;
+        font-family: "Inter";
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
-        color: #E4E5EA;
-        display: flex;
-        gap: 6%;
-        @include respons(320px) {
-            position: absolute;
-            width: 100%;
-            gap: 6.5%;
-            top: 30px;
-            left: 10px;
-            .linkhead{
-
-                
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 12px;
-                line-height: 15px;
-                /* identical to box height */
-                
-                text-transform: uppercase;
-                
-                /* light text */
-                
-                color: #E4E5EA;
-            }
-            .linkheadd{
-                display: none;
-            }
-        }
+        color: #e4e5ea;
+      }
     }
-    .head_contact{
-        position: absolute;
-        width: 308px;
-        justify-content: space-between;
-        left: 832px;
-        color: #E4E5EA;
-        display: flex;
-        align-items: center;
-
-
-        .telegram{
-            width: 20px;
-            height: 20px;
-        }
-        .viber{
-            width: 20px;
-            height: 19px;
-        }
-        .whatsap{
-            width: 20px;
-            height: 20px;
-        }
-
+    &__purple-ball {
+      z-index: 2;
+      position: absolute;
+      top: -73px;
+      right: 31px;
+      backdrop-filter: blur(2px);
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
-}
+    &__red-ball {
+      z-index: 2;
+      position: absolute;
+      left: 161px;
+      top: 11px;
+      backdrop-filter: blur(2px);
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    &__purple-light {
+      position: absolute;
+      z-index: 1;
+      top: -65px;
+      left: -150px;
+      @media (max-width: 1280px) {
+        width: 580px;
+        left: 110px;
+      }
+      @media (max-width: 1024px) {
+        width: 400px;
+        top: -100px;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }

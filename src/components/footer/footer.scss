@@ -1,164 +1,219 @@
-@import '../../Assets/mixins/mixins.scss';
-
-.footer{
-    position: absolute;
-    width: 1141px;
-    height: 315px;
-    left: 149px;
-    top: 765px;
-    display: flex;
-    gap: 5%;
-    bottom: 0px;
-    @include respons(320px){
-        position: absolute;
-        display: grid;
-        left: 1px;
-        top: 600px;
-
+.footer {
+    padding: 124px 0 88px;
+    position: relative;
+    z-index: 2;
+    @media (max-width: 768px) {
+      padding: 45px 0 60px;
     }
-    .aboutus{
-        position: absolute;
-        left: 0;
-        height: 140px;
-        display: grid;
-        font-family: 'Inter';
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+    &__company {
+      text-align: left;
+      margin-right: 98px;
+      @media (max-width: 1024px) {
+        margin-right: 10px;
+      }
+      @media (max-width: 768px) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+    &__company-items {
+      display: flex;
+      flex-direction: column;
+      a {
+        @media (max-width: 768px) {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+        }
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        font-family: "Inter";
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
-        color: #E4E5EA;
-        @include respons(320px) {
-            position: absolute;
-            width: 91px;
-            height: 15px;
-            left: 10px;
-            display: grid;
-            gap: 20px;
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-
-        }
-        .aboutlink{
-            width: 250px;
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 17px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: #656566;
-        }
-    
+        color: #e4e5ea;
+      }
     }
-    .menu{
-        position: absolute;
-        left: 293px;
-        height: 240px;
-        display: grid;
-        color: #E4E5EA;
-        @include respons(320px) {
-            position: absolute;
-            top: 140px;
-            left: 10px;
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-        }
-        .menufoot{
-            color: #656566;
-        }
-        .menulinks{
-            width: 500px;
-            display: flex;
-            gap: 14%;
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;
-            color: #E4E5EA;
-
-            @include respons(320px) {
-                width: 320px;
-                display: flex;
-                gap: 10%;
-            }
-
-        }
+    &__menu {
+      text-align: left;
+      flex: 1;
     }
-    .footcontacts{
-        position: absolute;
-        display: grid;
-        width: 270px;
-        height: 205px;
-        left: 870px;
-        text-align: right;
-        color: #E4E5EA;
-        @include respons(320px) {
-            position: absolute;
-            left: 10px;
-            height: 140px;
-            top: 400px;
-            text-align: left;
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 19px;
-        }
-        .contacts_foot{
-            color: #656566;
-        }
-        
-        .footicons{
-            display: flex;
-            gap: 5%;
-            justify-content: end;
-            @include respons(320px) {
-                justify-content: start;
-            }
-            img{
-                width: 20px;
-                height: 20px; 
-            }
-        }
+    &__menu-wrapper {
+      display: flex;
+      @media (max-width: 768px) {
+        margin-bottom: 27px;
+        justify-content: space-between;
+      }
     }
-
-}
-
-.foottxt{
-    position: absolute;
-    width: 239px;
-    top: 1010px;
-    left: 1050px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    text-align: right;
-    text-decoration-line: underline;
-    color: #E4E5EA;
-
-    @include respons(320px) {
-        position: absolute;
-        width: 239px;
-        height: 15px;
-        top: 1174px;
-        left: 10px;
-        text-align: left;
-        font-family: 'Montserrat';
+    &__menu-left {
+      display: flex;
+      flex-direction: column;
+      margin-right: 52px;
+      @media (max-width: 768px) {
+        margin-right: 0px;
+      }
+      a {
+        margin-bottom: 10px;
+        @media (max-width: 768px) {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          &:first-child {
+            width: 75px;
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        font-family: "Inter";
         font-style: normal;
         font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        
-        color: #E4E5EA;
+        font-size: 16px;
+        line-height: 19px;
+        color: #e4e5ea;
+      }
     }
-}
+    &__menu-right {
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 768px) {
+        max-width: 111px;
+        margin-right: 30px;
+      }
+      a {
+        @media (max-width: 768px) {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+        }
+        &:first-child {
+          display: none;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        margin-bottom: 10px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #e4e5ea;
+        @media (max-width: 768px) {
+          &:first-child {
+            display: flex;
+          }
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+    &__contacts {
+      text-align: right;
+      @media (max-width: 768px) {
+        text-align: left;
+        margin-bottom: 30px;
+      }
+    }
+    &__contacts-wrapper {
+      display: flex;
+      flex-direction: column;
+      a {
+        @media (max-width: 768px) {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+        }
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+    &__contacts-viber {
+      font-weight: 500 !important;
+      @media (max-width: 768px) {
+        font-size: 16px !important;
+        line-height: 19px !important;
+      }
+    }
+    &__icons {
+      display: flex;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      align-items: center;
+      justify-content: flex-end;
+      a {
+        margin-right: 14px;
+        img {
+          @media (max-width: 768px) {
+            width: 20px;
+          }
+        }
+      }
+      a + :last-child {
+        margin-right: 0;
+      }
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        margin-top: 8px;
+      }
+    }
+  
+    &__title {
+      margin-bottom: 20px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #656566;
+      @media (max-width: 768px) {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+      }
+    }
+  
+    &__regulations {
+      position: absolute;
+      right: 0;
+      bottom: 20px;
+      width: 240px;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 19px;
+      text-align: right;
+      color: #e4e5ea;
+      a {
+        text-decoration-line: underline;
+        letter-spacing: 1px;
+      }
+      @media (max-width: 768px) {
+        bottom: 4px;
+        text-align: left;
+        left: 0;
+      }
+    }
+  }

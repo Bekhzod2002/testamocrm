@@ -1,61 +1,70 @@
 import React from "react";
-import './footer.scss';
 import telegram from '../../Assets/images/telegram.png';
-import viber from '../../Assets/images/viber.png';
 import whatsapp from '../../Assets/images/whatsapp.png';
-
+import viber from '../../Assets/images/viber.png';
 const Footer = () => {
-    return(
-        <>
-        <div>
-            <div className="footer">
-                <div className="aboutus">
-                    <div className="aboutlink">О КОМПАНИИ</div>
-                        <a className="programm">Партнёрская программа</a>
-                        <a className="vacancy">Вакансии</a>
-                    </div>
-                    <div className="menu">
-                        <div className="menufoot">МЕНЮ</div>
-                        <div className="menulinks">
-                            <div>
-                                <p>Расчёт стоимости</p>
-                                <p>Услуги</p>
-                                <p>Виджеты</p>
-                                <p>Интеграции</p>
-                                <p>Наши клиенты</p>
-                            </div>
-                            <div>
-                                <p>Кейсы</p>
-                                <p>Благодарственные письма</p>
-                                <p>Сертификаты</p>
-                                <p>Блог на Youtube</p>
-                                <p>Вопрос / Ответ</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="footcontacts">
-                        <div className="contacts_foot">КОНТАКТЫ</div>
-                        <p>+7 555 555-55-55</p>
-                        <div className="footicons">
-                            <img src={telegram} />
-
-                            <img src={viber} />
-                            
-                            <img src={whatsapp} />
-                        </div>
-                        <p>Москва, Путевой проезд 3с1, к 902</p>
-                    </div>
-                </div>    
-            
-                <div className="foottxt">
-                    <p>©WELBEX 2022. Все права защищены.</p>
-                    <p>Политика конфиденциальности</p>
-                </div>
+  return (
+    <div className="container">
+      <footer className="footer">
+        <div className="footer__wrapper">
+          <div className="footer__company">
+            <p className="footer__title">О компании</p>
+            <div className="footer__company-items">
+              <a href="/">Партнёрская программа</a>
+              <a href="/">Вакансии</a>
+            </div>
+          </div>
+          <div className="footer__menu">
+            <p className="footer__title">Меню</p>
+            <div className="footer__menu-wrapper">
+              <div className="footer__menu-left">
+                <a href="/">Расчёт стоимости</a>
+                <a href="/">Услуги</a>
+                <a href="/">Виджеты</a>
+                <a href="/">Интеграции</a>
+                <a href="/">Наши клиенты</a>
+              </div>
+              <div className="footer__menu-right">
+                <a href="/"> Благодарность клиентов</a>
+                <a href="/">Кейсы</a>
+                <a href="/">Благодарственные письма</a>
+                <a href="/">Сертификаты</a>
+                <a href="/">Блог на Youtube</a>
+                <a href="/">Вопрос / Ответ</a>
+              </div>
+            </div>
+          </div>
+          <div className="footer__contacts">
+            <p className="footer__title">Контакты</p>
+            <div className="footer__contacts-wrapper">
+              <a className="footer__contacts-viber" href="tel:+75555555555">
+                +7 555 555-55-55
+              </a>
+              <div className="footer__icons">
+                <a href="/">
+                  <img src={telegram} alt="Icon: Telegram" />
+                </a>
+                <a href="/">
+                  <img src={viber} alt="Icon: Viber" />
+                </a>
+                <a href="/">
+                  <img src={whatsapp} alt="Icon: WhatsApp" />
+                </a>
+              </div>
+              <a href="http://maps.google.com/?q=Москва, Путевой проезд 3с1, к 902">
+                Москва, Путевой проезд 3с1, к 902
+              </a>
+            </div>
+          </div>
         </div>
-        
-        </>
-
-    )
-}
+        <p className="footer__regulations">
+          ©WELBEX 2022. Все права защищены.
+          <br />
+          <a href="/">Политика конфиденциальности</a>
+        </p>
+      </footer>
+    </div>
+  );
+};
 
 export default Footer;

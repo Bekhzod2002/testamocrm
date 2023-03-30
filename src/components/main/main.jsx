@@ -1,49 +1,89 @@
 import React from "react";
-import './main.scss';
+import redball2 from '../../Assets/images/red-ball-2.png';
+import redlight from '../../Assets/images/red-light.png';
 const Main = () => {
-    return(
-        <>
-            <div className="circlemain"></div>
-            <div className="circleleft"></div>
-            <div className="littlecircle"></div>
-            <div className="adaptcircle"><div className="adaptkrug"></div></div>
-            <div className="main">
-                <div className="jobwithus">
-                    <p className="earn">Зарабатывайте больше <br/> <span className="withwelbex">с WELBEX</span> </p>
-                    <p className="oursettings">Развиваем и контролируем продажи за вас</p>
+    return (
+      <main className="main">
+        <div className="container">
+          <div className="main__wrapper">
+            <div className="main__slogan">
+              <h1>
+                Зарабатывайте больше <span>с WELBEX</span>
+              </h1>
+              <p>Развиваем и контролируем продажи за вас</p>
+              <img className="main__red-light" src={redlight} alt="" />
+            </div>
+            <div className="main__advice">
+              <h3 className="main__title">
+                Вместе с <span>бесплатной </span>
+                <span>консультацией </span>
+                мы дарим:
+              </h3>
+              <div className="main__layout">
+                <div className="main__widgets">
+                  <h3>Виджеты</h3>
+                  <p>30 готовых решений</p>
                 </div>
-                <div className="freeconsultation">
-                    <div className="withconsult">Вместе с <span className="freeconsulttxt">бесплатной консультацией</span>  мы дарим:</div>
-                    <div className="ourgifts">
-                        <div className="vidjet">
-                            <div className="vidjethead">ВИДЖЕТЫ</div>
-                            <p className="vidjettxt">30 готовых решений</p>
-                        </div>
-                        <div className="dashboard">
-                            <div className="dashboardhead">DASHBOARD</div>
-                            <p className="dashboardtxt">с показателями вашего бизнеса</p>
-                        </div>
-                        <div className="skype">
-                            <div className="skypehead">SKYPE АУДИТ</div>
-                            <p className="skypetxt">отдела продаж и CRM системы</p>
-                        </div>
-                        <div className="month">
-                            <div className="monthhead">35 ДНЕЙ</div>
-                            <p className="monthtxt">использования CRM</p>
-                        </div>
-                    </div>
-                    <div className="adaptive">
-                        <div className="audit"> <hr className="line"/> <span className="adapskype">skype аудит</span></div>
-                        <div className="adapt_vidjet"><hr className="line_vid"/> <span className="adaptvidjet">30 виджетов</span></div>
-                        <div className="dashboard_adapt"><hr className="line_dash"/> <span className="adaptdashboard" >DASHBOARD</span></div>
-                        <div className="amocrm"><hr className="linecrm" /> <span className="adaptmonth">Месяц аmoCRM</span></div>
-                    </div>
-                    <button className="getconsult">Получить консультацию</button>
+                <div className="main__widgets">
+                  <h3>Dashboard</h3>
+                  <p>с показателями вашего бизнеса</p>
                 </div>
-            </div>        
-        </>
-
-    )
-}
-
-export default Main;
+                <div className="main__widgets">
+                  <h3>Skype Аудит</h3>
+                  <p>отдела продаж и CRM системы</p>
+                </div>
+                <div className="main__widgets">
+                  <h3>35 дней</h3>
+                  <p>использования CRM</p>
+                </div>
+              </div>
+              <div className="main__layout-mobile">
+                <div>
+                  <img
+                    src="img/main-mobile-line.svg"
+                    alt=""
+                    className="main__line"
+                  />
+                  <span>Skype аудит</span>
+                </div>
+                <div>
+                  <img
+                    src="img/main-mobile-line.svg"
+                    alt=""
+                    className="main__line"
+                  />
+                  <span>30 виджетов</span>
+                </div>
+                <div>
+                  <img
+                    src="img/main-mobile-line.svg"
+                    alt=""
+                    className="main__line"
+                  />
+                  <span>Dashboard</span>
+                </div>
+                <div>
+                  <img
+                    src="img/main-mobile-line.svg"
+                    alt=""
+                    className="main__line"
+                  />
+                  <span>Месяц аmoCRM</span>
+                </div>
+              </div>
+              <button className="main__button">Получить консультацию</button>
+              <img
+                className="main__red-ball"
+                src={redball2}
+                alt="red ball"
+              />
+            </div>
+          </div>
+          
+        </div>
+        
+      </main>
+    );
+  };
+  
+  export default Main;
